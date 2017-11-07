@@ -42,7 +42,7 @@ public class DisplayActivity extends Activity {
                     Log.d("NMZ_LOG", getIntent().getStringExtra(Utilities.URL));
                     Log.d("NMZ_LOG", "Reached 2");
                     URL url = new URL(getIntent().getStringExtra(Utilities.URL));
-                    new RetrieveAPIResponses().execute(url);
+                    new RetrieveAPIResponses().execute(url);    // TODO: stop execution in onDestroy()
 
                 } catch (Exception e) {
                     hideProgressBar();
